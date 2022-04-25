@@ -23,8 +23,8 @@
   keysym l = l L Right
 ```
 
-1º | Creat a file in <b>home/pessoal files</b> with name ```.Xmodmap```.<br>
-2º | Open it terminal(in the folder where it is .Xmodmap) and type ```xmodmap .Xmodmap```.<br>
+::marker 1º - Creat a file in <b>home/pessoal files</b> with name ```.Xmodmap```.<br>
+::marker 2º - Open it terminal(in the folder where it is .Xmodmap) and type ```xmodmap .Xmodmap```.<br>
 
 
 <i>Return to default paste in terminal</i> ```setxkbmap br``` 
