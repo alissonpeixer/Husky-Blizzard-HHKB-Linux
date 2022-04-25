@@ -1,7 +1,7 @@
 # Map Arrow keys for Linux using Xmodmap!
 Remapping Using CAPS LOCK!
 
-
+<hr>
 
 <section>
 
