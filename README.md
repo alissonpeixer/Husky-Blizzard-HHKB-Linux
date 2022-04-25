@@ -23,9 +23,9 @@
   keysym l = l L Right
 ```
 
-  1º Creat file in pessoal files .Xmodmap.
+  1º Creat a file in <b>home/pessoal files</b> for name ```.Xmodmap```.
   
-  2º Open terminal paste '```xmodmap .Xmodmap```'.
+  2º Open terminal paste ```xmodmap .Xmodmap```.
   
 </section>
 
