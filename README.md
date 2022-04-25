@@ -1,4 +1,4 @@
-# Map Arrow keys for Linux  usen Xmodmap!
+# Map Arrow keys for Linux using Xmodmap!
 
 
 
