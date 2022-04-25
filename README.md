@@ -22,11 +22,11 @@
   keysym k = k K Up
   keysym l = l L Right
 ```
+<ul>
+<li>1º - Creat a file in <b>home/pessoal files</b> with name <code>.Xmodmap</code>.</li>
+<li>2º - Open it terminal(in the folder where it is .Xmodmap) and type <code>xmodmap .Xmodmap</code>.</li>
+</ul>
 
-::marker 1º - Creat a file in <b>home/pessoal files</b> with name ```.Xmodmap```.<br>
-::marker 2º - Open it terminal(in the folder where it is .Xmodmap) and type ```xmodmap .Xmodmap```.<br>
-
-
-<i>Return to default paste in terminal</i> ```setxkbmap br``` 
+<i>Return to default paste in terminal</i> <code>setxkbmap br</code> 
   
 </section>
