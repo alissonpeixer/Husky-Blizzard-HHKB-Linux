@@ -1,4 +1,5 @@
 # Map Arrow keys for Linux using Xmodmap!
+Remapping Using CAPS LOCK!
 
 
 
@@ -28,5 +29,7 @@
 </ul>
 
 <i>Return to default paste in terminal</i> <code>setxkbmap br</code> 
+  
+
   
 </section>
