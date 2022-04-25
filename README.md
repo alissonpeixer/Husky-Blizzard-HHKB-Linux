@@ -27,6 +27,6 @@
 2º | Open it terminal(in the folder where it is .Xmodmap) and type ```xmodmap .Xmodmap```.<br>
 
 
-#<p><i>Return to default paste in terminal</i></p>|```setxkbmap br``` 
+<i>Return to default paste in terminal</i> ```setxkbmap br``` 
   
 </section>
