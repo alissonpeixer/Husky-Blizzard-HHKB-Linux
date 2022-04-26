@@ -23,6 +23,7 @@ Remapping Using CAPS LOCK!
   keysym k = k K Up
   keysym l = l L Right
 ```
+<hr>
 <ul>
 <li>1º - Creat a file in <b>home/pessoal files</b> with name <code>.Xmodmap</code>.</li>
 <li>2º - Open it terminal(in the folder where it is .Xmodmap) and type <code>xmodmap .Xmodmap</code>.</li>
