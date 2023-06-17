@@ -1,8 +1,25 @@
 #!/bin/sh
+
+
+remove(){
+    echo "Do you want to delete the current file? [y/n]"
+    read next
+    if [ "$next" = "y" ]; then
+        rm $HOME/.Xmodmap
+        sh ./mapArrowHHKB.sh
+    fi
+}
 createdFile() {
     if [ -f "$arquivo" ]; then
-        xmodmap $HOME/.Xmodmap
-        echo "START..."
+
+        echo "Deseja apagar o arquivo atual? [y/n]"
+        read next
+
+        if [ "$next" = "y" ]; then
+            rm $HOME/.Xmodmap
+            sh ./mapArrowHHKB.sh
+        fi
+
     else    
         styleSelect="false"
 
@@ -17,24 +34,28 @@ createdFile() {
 
         if [ "$style" -eq 1 ]; then
             conteudo="
-            keycode 105 = Caps_Lock
-            keycode 66 = Mode_switch  
-            keysym a = a A Left
-            keysym s = s S Down
-            keysym w = w W Up
-            keysym d = d D Right
+                keycode 105 = Caps_Lock
+                keycode 66 = Mode_switch 
+                keycode 9 = quotedbl
+                keysym a = a A Left
+                keysym s = s S Down
+                keysym w = w W Up
+                keysym d = d D Right
             "
             styleSelect="true"
+            clear
         elif [ "$style" -eq 2 ]; then 
             conteudo="
             keycode 105 = Caps_Lock
-            keycode 66 = Mode_switch  
+            keycode 66 = Mode_switch 
+            keycode 9 = quotedbl 
             keysym h = h H Left
             keysym j = j J Down
             keysym k = k K Up
             keysym l = l L Right
             " 
             styleSelect="true"
+            clear   
         else
             echo "NotSelect"
         fi
@@ -58,6 +79,7 @@ echo "________________________________________"
 echo "1 - Instalation MapScript"
 echo "2 - Start  MAP"
 echo "3 - Reload MAP"
+echo "4 - Remove MapScript"
 echo "________________________________________"
 
 read modo
@@ -73,6 +95,8 @@ elif [ "$modo" -eq 3 ]; then
     echo "RELOAD..."
 elif [ "$modo" -eq 1 ]; then
     createdFile
+elif [ "$modo" -eq 4 ]; then
+    remove
 else
    echo "BY ALISSON PEIXER"
 fi
