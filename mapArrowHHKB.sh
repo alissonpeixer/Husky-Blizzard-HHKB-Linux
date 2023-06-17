@@ -1,6 +1,4 @@
 #!/bin/sh
-
-
 remove(){
     echo "Do you want to delete the current file? [y/n]"
     read next
@@ -25,8 +23,9 @@ createdFile() {
 
         echo "________________________________________"
         echo "Select to format: "
-        echo "1 -  W A S D"
-        echo "2 -  H J K L"
+        echo "1 -  W A S D      "
+        echo "2 -  H J K L      "
+        echo "3 -  W A S D ? "" "
         echo "________________________________________"
 
         read style
@@ -36,7 +35,7 @@ createdFile() {
             conteudo="
                 keycode 105 = Caps_Lock
                 keycode 66 = Mode_switch 
-                keycode 9 = quotedbl
+                keysym 9 = quotedbl
                 keysym a = a A Left
                 keysym s = s S Down
                 keysym w = w W Up
@@ -55,7 +54,18 @@ createdFile() {
             keysym l = l L Right
             " 
             styleSelect="true"
-            clear   
+            clear  
+        elif [ "$style" -eq 3 ]; then 
+            conteudo="
+                keycode 105 = Caps_Lock
+                keycode 225 = Mode_switch
+                keycode 66 = Mode_switch 
+                keycode 9 = quotedbl
+                keysym a = a A Left
+                keysym s = s S Down
+                keysym w = w W Up question question
+                keysym d = d D Right
+            "
         else
             echo "NotSelect"
         fi
@@ -80,6 +90,7 @@ echo "1 - Instalation MapScript"
 echo "2 - Start  MAP"
 echo "3 - Reload MAP"
 echo "4 - Remove MapScript"
+echo "5 - Add to boot System Preferences"
 echo "________________________________________"
 
 read modo
@@ -97,6 +108,15 @@ elif [ "$modo" -eq 1 ]; then
     createdFile
 elif [ "$modo" -eq 4 ]; then
     remove
+elif [ "$modo" -eq 5 ]; then
+    line_to_add="xmodmap .Xmodmap"
+    if grep -Fxq "$line_to_add" $HOME/.bashrc; then
+        echo "A linha já existe no arquivo ~/.bashrc."
+    else
+        # Adicionar a linha no arquivo
+        echo "$line_to_add" >> $HOME/.bashrc
+        echo "Linha adicionada com sucesso ao arquivo ~/.bashrc."
+    fi
 else
    echo "BY ALISSON PEIXER"
 fi
