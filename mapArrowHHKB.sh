@@ -15,6 +15,7 @@ logMenssage()
         echo "3 - Reload MAP"
         echo "4 - Remove MapScript"
         echo "5 - Add to boot System Preferences"
+        echo "6 - Set default map"
         echo "________________________________________"
     else
         echo "________________________________________"
@@ -51,12 +52,14 @@ createdLocalFile()
 
     if [ "$style" -eq 1 ]; then
         conteudo="
-            keycode 9 = quotedbl
+
+            keycode 9 = Escape quotedbl
 
             keycode 105 = Caps_Lock
             keycode 66 = Mode_switch
 
             remove Lock = Caps_Lock
+
 
             keysym a = a A Left
             keysym s = s S Down
@@ -68,7 +71,7 @@ createdLocalFile()
     elif [ "$style" -eq 2 ]; then
         conteudo="
 
-        keycode 9 = quotedbl
+        keycode 9 = Escape quotedbl
 
         keycode 105 = Caps_Lock
         keycode 66 = Mode_switch
@@ -84,7 +87,8 @@ createdLocalFile()
         clear
     elif [ "$style" -eq 3 ]; then
         conteudo="
-            keycode 9 = quotedbl
+            keycode 9 = Escape quotedbl
+
             keycode 105 = Caps_Lock
             keycode 66 = Mode_switch
 
@@ -178,6 +182,8 @@ else
             echo "$line_to_add" >> $HOME/.bashrc
             echo "Line added successfully to the file. ~/.bashrc."
         fi
+    elif [ "$modo" -eq 6 ]; then
+        setxkbmap br
     else
     echo "BY ALISSON PEIXER"
     fi
