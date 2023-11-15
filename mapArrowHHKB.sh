@@ -52,7 +52,6 @@ createdLocalFile()
 
     if [ "$style" -eq 1 ]; then
         conteudo="
-
             keycode 9 = Escape quotedbl
 
             keycode 105 = Caps_Lock
@@ -63,8 +62,9 @@ createdLocalFile()
 
             keysym a = a A Left
             keysym s = s S Down
-            keysym w = w W Up
+            keysym w = w W Up questiondown question
             keysym d = d D Right
+
         "
         styleSelect="true"
         clear
